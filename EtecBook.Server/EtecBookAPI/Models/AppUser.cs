@@ -4,34 +4,34 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace EtecBookAPI.Models;
 
 [Table("Usuario")]
-public class AppUser
-{
-    [Key]
-    public Guid Id { get; set; }
 
-    [Required]
-    [StringLength(60)]
-    public string Name { get; set; }
+    public class AppUser
+    {
+        [Key]
+        public Guid Id { get; set; }
 
-    [Required]
-    [StringLength(20, MinimumLength = 3)]
-    public string UserName { get; set; }
+        [Required]
+        [StringLength(60)]
+        public string Name { get; set; }
 
-    [Required]
-    public string Password { get; set; }
+        [Required]
+        [StringLength(20, MinimumLength = 3)]
+        public string UserName { get; set; }
 
-    public string Token { get; set; }
+        [Required]
+        public string Password { get; set; }
 
-    [Required]
-    [StringLength(20)]
-    public string Role { get; set; }
+        public string Token { get; set; }
 
-    [Required]
-    [EmailAddress]
-    [StringLength(100)]
-    public string Email { get; set; }
+        [Required]
+        [StringLength(20)]
+        public string Role { get; set; }
 
-    [StringLength(300)]
-    public string ProfilePicture { get; set; }
+        [Required]
+        [EmailAddress]
+        [StringLength(100)]
+        public string Email { get; set; }
 
-}
+        [StringLength(300)]
+        public string ProfilePicture { get; set; }
+    }
